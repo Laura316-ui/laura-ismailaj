@@ -1,30 +1,18 @@
-import java.util.*;
-import java.time.LocalDateTime;
-import java.time.format.DateTimeFormatter;
+import java.util.Scanner;
 
-public class Main {
+public class  {
     public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
 
-        System.out.println("Hello, World");
+        System.out.print("Shkruaj emrin: ");
+        String emri = scanner.nextLine();
 
-        System.out.println("Përshëndetje, Kristi!");
+        System.out.print("Shkruaj qytetin: ");
+        String qyteti = scanner.nextLine();
 
-        LocalDateTime now = LocalDateTime.now();
-        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm");
-        String dateTime = now.format(formatter);
+        System.out.println("Përshëndetje, " + emri + " nga " + qyteti + "!");
 
-        System.out.println("Sot është: " + dateTime);
-
-        int hour = now.getHour();
-        String greeting;
-        if (hour >= 5 && hour < 12) {
-            greeting = "Mirëmëngjes";
-        } else if (hour >= 12 && hour < 18) {
-            greeting = "Mirëdita";
-        } else {
-            greeting = "Mirëmbrëma";
-        }
-
-        System.out.println(greeting + " dhe mirë se erdhe në Java!");
+        scanner.close();
     }
 }
+
